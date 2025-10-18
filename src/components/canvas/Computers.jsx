@@ -64,7 +64,7 @@ const ComputersCanvas = () => {
     <Canvas
       frameloop='demand'
       shadows
-      dpr={[1, 2]}
+      dpr={[3, 2]}
       camera={{ position: [1, 1, 0.2], fov: 70 }}
       gl={{ preserveDrawingBuffer: true }}
     >
@@ -81,11 +81,7 @@ const ComputersCanvas = () => {
     </Canvas>
   );
 };
-function animate() {
-  requestAnimationFrame(animate);
-  controls.update();
-  renderer.render(scene, camera);
-}
+
 
 
 
