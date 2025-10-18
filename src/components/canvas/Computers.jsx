@@ -72,6 +72,7 @@ const ComputersCanvas = () => {
         <OrbitControls
           enableZoom={true}
           autoRotate = {true}
+          enablePan = {true}
           maxPolarAngle={Math.PI / 30}
           minPolarAngle={Math.PI / 2}
         />
