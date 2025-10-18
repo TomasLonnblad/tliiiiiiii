@@ -10,41 +10,6 @@ const Computers = ({ isMobile }) => {
   const computer = useGLTF("/desktop_pc/scene.gltf");
 
 
-
-
-const mobilePosition = size({
-  apply({ elements }) {
-    const isMobile = window.matchMedia('(max-width: 600px)').matches;
-    if (isMobile) {
-      elements.floating.style = {
-        position: 'fixed',
-        width: '100%',
-        bottom: 0,
-        left: 0,
-        right: 0,
-      };
-    }
-  },
-});
-
-  
-
-const mobilePosition = size({
-  apply({ elements }) {
-    const isMobile = window.matchMedia('(max-width: 600px)').matches;
-    if (isMobile) {
-      elements.floating.style = {
-        position: 'fixed',
-        width: '100%',
-        bottom: 0,
-        left: 0,
-        right: 0,
-      };
-    }
-  },
-});
-
-
   
   return (
     <mesh>
@@ -61,7 +26,7 @@ const mobilePosition = size({
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [0, -3.25, -1.5]}
+        position={isMobile ? [0, 3, -2.2] : [0, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.01]}
       />
     </mesh>
