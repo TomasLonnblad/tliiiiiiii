@@ -7,13 +7,7 @@ import CanvasLoader from "../Loader";
 
 import { autoUpdate, useFloating, size } from "@floating-ui/react-dom";
 
-const mobileStyles = {
-  bottom: 0,
-  left: 0,
-  right: 0,
-  top: "auto",
-  width: "100%"
-};
+
 
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("/desktop_pc/scene.gltf");
