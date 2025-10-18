@@ -81,5 +81,12 @@ const ComputersCanvas = () => {
     </Canvas>
   );
 };
+function animate() {
+  requestAnimationFrame(animate);
+  controls.update();
+  renderer.render(scene, camera);
+}
+
+
 
 export default ComputersCanvas;
