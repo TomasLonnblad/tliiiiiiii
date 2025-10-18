@@ -10,6 +10,25 @@ const Computers = ({ isMobile }) => {
   const computer = useGLTF("/desktop_pc/scene.gltf");
 
 
+
+
+const mobilePosition = size({
+  apply({ elements }) {
+    const isMobile = window.matchMedia('(max-width: 600px)').matches;
+    if (isMobile) {
+      elements.floating.style = {
+        position: 'fixed',
+        width: '100%',
+        bottom: 0,
+        left: 0,
+        right: 0,
+      };
+    }
+  },
+});
+
+  
+
 const mobilePosition = size({
   apply({ elements }) {
     const isMobile = window.matchMedia('(max-width: 600px)').matches;
