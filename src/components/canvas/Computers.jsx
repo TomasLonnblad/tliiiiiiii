@@ -9,6 +9,27 @@ import CanvasLoader from "../Loader";
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("/desktop_pc/scene.gltf");
 
+
+
+const mobilePosition: Modifier<'mobilePosition', { state: State }> = () => ({
+  name: 'mobilePosition',
+  enabled: true,
+  phase: 'write',
+  fn({ state }) {
+    const isMobile = window.matchMedia('(max-width: 600px)').matches;
+    if (isMobile) {
+      state.styles.popper = {
+        position: 'fixed',
+        width: '100%',
+        bottom: 0,
+        left: 0,
+        right: 0,
+      };
+    };
+  },
+});
+
+  
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor='black' />
