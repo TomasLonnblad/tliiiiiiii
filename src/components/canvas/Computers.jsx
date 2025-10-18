@@ -5,7 +5,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import CanvasLoader from "../Loader";
 
-import { autoUpdate, useFloating, size } from "@floating-ui/react-dom";
+
 
 
 
