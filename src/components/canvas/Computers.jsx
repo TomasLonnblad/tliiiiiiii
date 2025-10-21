@@ -6,19 +6,14 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 import CanvasLoader from "../Loader";
 
 
-
-
-
 const Computers = ({ isMobile }) => {
   const computer = useGLTF("/desktop_pc/scene.gltf");
 
-
-  
   return (
     <mesh>
       <hemisphereLight intensity={0.15} groundColor='black' />
       <spotLight
-        position={[-5, 60, 10]}
+        position={[-20, 80, 10]}
         angle={5.12}
         penumbra={1}
         intensity={1}
@@ -29,7 +24,7 @@ const Computers = ({ isMobile }) => {
       <primitive
         object={computer.scene}
         scale={isMobile ? 0.7 : 0.75}
-        position={isMobile ? [0, -3, -2.2] : [-1.7, -3.25, -2]}
+        position={isMobile ? [0, -3, -2.2] : [1, -3.25, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </mesh>
@@ -37,7 +32,7 @@ const Computers = ({ isMobile }) => {
 };
 
 const ComputersCanvas = () => {
-  const [isMobile, setIsMobile] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     // Add a listener for changes to the screen size
@@ -65,16 +60,13 @@ const ComputersCanvas = () => {
       frameloop='demand'
       shadows
       dpr={[1, 2]}
-      camera={{ position: [-2,5, -0.01, -0.5], fov: 80 }}
+      camera={{ position: [0.1, 0.1, 0.1], fov: 90 }}
       gl={{ preserveDrawingBuffer: true }}
     >
       <Suspense fallback={<CanvasLoader />}>
         <OrbitControls
-          enableDamping = {true}
-          enableZoom = {true}
-          autoRotate = {true}
-          enablePan = {true}
-          maxPolarAngle={Math.PI / 20}
+          enableZoom={false}
+          maxPolarAngle={Math.PI / 22}
           minPolarAngle={Math.PI / 2.5}
         />
         <Computers isMobile={isMobile} />
@@ -84,8 +76,5 @@ const ComputersCanvas = () => {
     </Canvas>
   );
 };
-
-
-
 
 export default ComputersCanvas;
