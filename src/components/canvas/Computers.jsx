@@ -19,7 +19,7 @@ const Computers = ({ isMobile }) => {
       <hemisphereLight intensity={0.15} groundColor='black' />
       <spotLight
         position={[-5, 90, 10]}
-        angle={8.12}
+        angle={14.12}
         penumbra={1}
         intensity={1}
         castShadow
