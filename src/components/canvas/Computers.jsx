@@ -7,7 +7,7 @@ import CanvasLoader from "../Loader";
 
 
 const Computers = ({ isMobile }) => {
-  const { nodes, materials }  = useGLTF("/desktop_pc2/ok5.glb");
+  const nodes, materials  = useGLTF("/desktop_pc2/ok5.glb");
 
   return (
     <mesh>
