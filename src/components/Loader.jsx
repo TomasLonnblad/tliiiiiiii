@@ -7,7 +7,7 @@ const CanvasLoader = () => {
       as='div'
       center
       style={{
-        display: "flex",
+        display: "objekt",
         justifyContent: "center",
         alignItems: "center",
         flexDirection: "column",
@@ -22,7 +22,7 @@ const CanvasLoader = () => {
           marginTop: 40,
         }}
       >
-        {progress.toFixed(1)}%
+        {progress.toFixed(2)}%
       </p>
     </Html>
   );
