@@ -5,7 +5,7 @@ import { useThree } from "@react-three/fiber";
 
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
-import CanvasLoader from "../Loader";
+
 
 import { useTexture } from "@react-three/drei";
 
