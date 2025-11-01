@@ -9,7 +9,7 @@ import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
 import { useTexture } from "@react-three/drei";
 
-
+import CanvasLoader from "../Loader";
 const Computers = ({ isMobile }) => {
   const computer  = useGLTF("/desktop_pc2/ok5.glb");
 
